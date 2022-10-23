@@ -18,25 +18,18 @@ namespace GameServer
     {
         Thread thread;
         bool running = false;
-        NetService network;
-
         public bool Init()
         {
-            network = new NetService();
-            network.Init(8000);
-            HelloWorldService.Instance.Init();
-            //DBService.Instance.Init();
-            //var a = DBService.Instance.Entities.Characters.Where(s => s.TID == 1);
-            //Console.WriteLine("{0}",a.FirstOrDefault<TCharacter>().Name);
+            DBService.Instance.Init();
             thread = new Thread(new ThreadStart(this.Update));
 
+            /*SkillBridge.Message.UserRegisterRequest userRegisterRequest = new SkillBridge.Message.UserRegisterRequest();
+            userRegisterRequest.Age;*/
             return true;
         }
 
         public void Start()
         {
-            network.Start();
-            HelloWorldService.Instance.Start();
             running = true;
             thread.Start();
         }
@@ -46,7 +39,6 @@ namespace GameServer
         {
             running = false;
             thread.Join();
-            network.Stop();
         }
 
         public void Update()
