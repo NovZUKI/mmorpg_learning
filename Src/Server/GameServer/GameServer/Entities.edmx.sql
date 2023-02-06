@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 10/22/2022 16:07:37
--- Generated from EDMX file: D:\Git_test\mmorpg1\mmorpg_learning\Src\Server\GameServer\GameServer\Entities.edmx
+-- Date Created: 09/07/2018 00:02:53
+-- Generated from EDMX file: D:\Projects\ExtremeWorld\project-z\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -72,13 +72,6 @@ CREATE TABLE [dbo].[Characters] (
 );
 GO
 
--- Creating table 'TCharItems'
-CREATE TABLE [dbo].[TCharItems] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [Name] nvarchar(max)  NOT NULL
-);
-GO
-
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -99,12 +92,6 @@ GO
 ALTER TABLE [dbo].[Characters]
 ADD CONSTRAINT [PK_Characters]
     PRIMARY KEY CLUSTERED ([ID] ASC);
-GO
-
--- Creating primary key on [Id] in table 'TCharItems'
-ALTER TABLE [dbo].[TCharItems]
-ADD CONSTRAINT [PK_TCharItems]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
 -- --------------------------------------------------
