@@ -1,47 +1,19 @@
-2023-02-07 20:42:56,641 [ 1] INFO  Unity: LoadingManager start
-2023-02-07 20:42:59,728 [ 1] INFO  Unity: DataManager > DataManager()
-2023-02-07 20:43:20,454 [ 1] INFO  Unity: UserLoginRequest::user :player1 psw:pass1
-2023-02-07 20:43:20,455 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-02-07 20:43:20,456 [ 1] INFO  Unity: DoConnect
-2023-02-07 20:43:20,457 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-02-07 20:43:20,458 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-02-14 01:30:38,110 [ 1] INFO  Unity: LoadingManager start
+2023-02-14 01:30:41,121 [ 1] INFO  Unity: DataManager > DataManager()
+2023-02-14 01:30:49,346 [ 1] INFO  Unity: UserRegisterRequest::user :p1 psw:p1
+2023-02-14 01:30:49,347 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-02-14 01:30:49,348 [ 1] INFO  Unity: DoConnect
+2023-02-14 01:30:49,349 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-14 01:30:49,351 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-02-07 20:43:20,461 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-02-07 20:43:58,752 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in D:\Git_test\mmorpg1\mmorpg_learning\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
-
-2023-02-07 20:43:58,753 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
-
-2023-02-07 20:43:58,757 [ 1] INFO  Unity: DoConnect
-2023-02-07 20:43:58,757 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-02-07 20:43:58,758 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2023-02-07 20:44:00,812 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2023-02-07 20:44:00,813 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2023-02-07 20:44:00,919 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-02-07 20:44:00,919 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-02-14 01:30:49,354 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-02-14 01:30:51,134 [ 1] INFO  Unity: OnUserRegister:Success [None]
+2023-02-14 01:30:56,853 [ 1] INFO  Unity: UserLoginRequest::user :p1 psw:p1
+2023-02-14 01:30:56,905 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-02-14 01:30:56,907 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-02-14 01:30:57,080 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-14 01:31:10,156 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-02-14 01:31:10,157 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
